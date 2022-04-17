@@ -1,0 +1,95 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-size: 62.5%;
+ 
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/*center the calculator on the page(case)*/
+.case{
+  display:flex;
+  align-items: center;/*align items to center of vertical axis since items are in a row*/
+  justify-content: center;/* align items to center of horizontal axis since items are in a row*/
+ }
+
+.calc{
+  display:grid;
+  grid-template-columns:repeat(4, 10em);
+  gap: 5px;
+  background-color: black;
+  border-radius: 50px;
+}
+
+#display{
+  grid-column: span 4;
+  height: 2.5em;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align:right;
+  font-size: 3em;
+  margin: 40px 20px 3px 20px;
+  background-color: white;
+}
+
+.buttons{
+  position:relative;
+  display:grid;
+  margin-left: 20px;
+  
+}
+
+.button{
+  height: 2em;
+  width: 2em;
+  font-size: 3em;
+  border-radius: 50%; 
+  margin: 10px;
+  font-weight: bold;
+}
+
+.button:hover{
+  background-color: grey;
+}
+
+#ac{
+  grid-column:1/4;
+  background-color: white;
+  font-weight: bold;
+  margin: 10px;
+  width: 13em;;
+  height: 2em;
+  border-radius:10px;
+  margin-bottom: 20px;
+  
+}
+
+
+#ac:hover{
+  background-color: gray;
+}
